@@ -6,12 +6,6 @@ const cartContainer = document.getElementById("cart-container");
 const asideCartContainer = document.getElementById("aside-cart-container");
 const closeToggleCart = document.getElementById("closeToggle-cart");
 
-const user = document.getElementById("user-icon")
-
-
-user.addEventListener("click" , function(){
-  location.href = "./src/login/login.html";
-})
 
 menuToggle.addEventListener("click", function () {
   menuToggle.style.display = "none";
