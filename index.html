@@ -282,37 +282,40 @@
         </div>
       </section>
 
-      <section id="aside-cart-container" class="relative flex flex-col overflow-y-auto p-4 h-full">
+      <section id="aside-cart-container" class="relative flex flex-col h-full p-4 overflow-y-auto">
         <!-- Cart Header -->
-        <div class="relative flex justify-between items-center">
-          <h1 class="font-bold text-3xl">Your Cart</h1>
+        <div class="relative flex justify-between items-center mb-4">
+          <h1 class="text-3xl font-bold">Your Cart</h1>
           <!-- Close Button (SVG) -->
-          <svg class="cursor-pointer hover:bg-slate-200 rounded-full" id="closeToggle-cart"
+          <svg id="closeToggle-cart" class="cursor-pointer hover:bg-slate-200 rounded-full"
             xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000">
             <path
               d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
           </svg>
         </div>
-        <hr />
 
-        <div class="flex-grow flex flex-col justify-between">
-          <!-- Main Content or Cart Items can go here -->
-          <div class="flex-grow">
-            <!-- Cart Items can be dynamically inserted here -->
+        <hr class="mb-4" />
+
+        <!-- Main Content -->
+        <div class="flex flex-col flex-grow justify-between">
+          <!-- Cart Items Placeholder (Dynamically Inserted Items) -->
+          <div id="cart-items" class="flex-grow mb-4">
+            <!-- Cart items will be dynamically inserted here -->
           </div>
-          <div class="absolute flex bottom-5 gap-32">
-            <div class="flex flex-col ">
+
+          <!-- Footer with Total Amount and Buy Now -->
+          <div class="flex justify-between fixed bottom-4 w-full">
+            <div class="flex flex-col">
               <span class="font-bold">Total Amount:</span>
-              <span class="font-bold" id="totalAmount">0</span>
+              <span id="totalAmount" class="font-bold">0</span>
               <span class="font-medium">Savings:</span>
-              <span class="font-medium" id="savings">0</span>
+              <span id="savings" class="font-medium">0</span>
             </div>
             <button id="buyNow"
-              class="bg-green-600 px-10 py-2 h-12 rounded-md hover:bg-green-700 hover:text-white font-bold">
+              class="bg-green-600 px-10 py-2 h-12 rounded-md font-bold hover:bg-green-700 hover:text-white">
               Buy Now
             </button>
           </div>
-          <!-- Buy Now Button -->
         </div>
       </section>
     </aside>
